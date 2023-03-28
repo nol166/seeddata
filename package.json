@@ -1,0 +1,10 @@
+{
+  "name": "mdb_seed_generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "John McCambridge <jmccamb@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
+  }
+}
