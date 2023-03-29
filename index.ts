@@ -16,9 +16,9 @@ program
 .option('-a, --amount <amount>', 'amount of documents to generate', '100')
 .option("-t, --type <type>", "type of documents to generate", "person")
 .option("-o, --output <output>", "output file to write to", "output.json")
-.option("-i --insert <insert>", "insert documents into a database")
-.option("-db, --database <database>", "database to insert documents into")
-.option("-coll, --collection <collection>", "collection to insert documents into")
+// .option("-i --insert <insert>", "insert documents into a database")
+// .option("-db, --database <database>", "database to insert documents into")
+// .option("-coll, --collection <collection>", "collection to insert documents into")
 .action((options) => {
   generatePerson(options, options.amount || 100);
 })
