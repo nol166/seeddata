@@ -1,6 +1,6 @@
 export interface Product {
-  name: string;
-  price: number;
+  productName: string;
+  price: string | number;
   description: string;
   instock: boolean;
   image: string;

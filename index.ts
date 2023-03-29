@@ -2,6 +2,7 @@
 
 import { Command } from "commander";
 import { generatePerson } from "./actions/generatePerson";
+import { generateProduct } from "./actions/generateProduct";
 const program = new Command();
 
 
@@ -20,7 +21,10 @@ program
 .option("-coll, --collection <collection>", "collection to insert documents into")
 .action((options) => {
   generatePerson(options, options.amount || 100);
-});
+})
+.action((options) => {
+  generateProduct(options, options.amount)
+})
 
 program.parse(process.argv);
 
