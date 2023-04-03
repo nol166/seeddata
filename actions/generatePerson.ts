@@ -11,11 +11,14 @@ type Person = {
   phone: string;
   avatar: string;
   birthday: Date;
+  skills: string[];
 };
+
 
 export const generatePerson = (options: any, amount: number) => {
   console.log(amount)
   if (options.type === "person") {
+    console.log("Generating people")
     let people: IPerson[] = [];
     for (let i = 0; i < amount; i++) {
       let person: Person = {
@@ -27,10 +30,11 @@ export const generatePerson = (options: any, amount: number) => {
         phone: faker.phone.number(),
         avatar: faker.image.avatar(),
         birthday: faker.date.birthdate(),
+        skills: Array.from({ length: 10 }, () => faker.name.jobTitle())
       };
       people.push(person);
     }
-    fs.writeFile(options.output, JSON.stringify(people), (err: any) => {
+    fs.writeFile(options.output, JSON.stringify(people), (err: Error | null) => {
       if (err) {
         console.log(err);
       }

@@ -20,10 +20,12 @@ program
 // .option("-db, --database <database>", "database to insert documents into")
 // .option("-coll, --collection <collection>", "collection to insert documents into")
 .action((options) => {
-  generatePerson(options, options.amount || 100);
-})
-.action((options) => {
-  generateProduct(options, options.amount)
+  if (options.type === "person") {
+    generatePerson(options, options.amount || 100);
+  }
+  if (options.type === "product") {
+    generateProduct(options, options.amount || 100);
+  }
 })
 
 program.parse(process.argv);
