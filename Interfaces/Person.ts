@@ -7,5 +7,6 @@ export interface Person {
   phone: string;
   avatar: string;
   birthday: Date;
+  numberOfReferences: number;
   skills: string[];
 }
