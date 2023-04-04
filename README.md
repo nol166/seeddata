@@ -1,7 +1,7 @@
 
 # MDB Seed Generator
 
-CLI utility for generating seed data for MongoDB databases, or anything can can use JSON. Written in Typescript.
+CLI utility for generating seed data for MongoDB databases, or anything that can use JSON. Written in Typescript.
 
 TODO:
 - [ ] Add more kinds of seed data
