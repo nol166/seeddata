@@ -130,4 +130,4 @@ dist
 .pnp.*
 
 # genereated JSON files
-output.json
+output_example.json

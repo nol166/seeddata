@@ -1,9 +1,13 @@
 {
   "name": "mdb_seed_generator",
+  "description": "Generates a seed data for MongoDB",
   "version": "1.0.0",
   "main": "index.js",
   "author": "John McCambridge <jmccamb@gmail.com>",
   "license": "MIT",
+  "bin": {
+    "mdb_seed_generator": "./index.js"
+  },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0"
   },
